@@ -1,5 +1,5 @@
 import '/style.css';
-import { getCredentials, signUp, signIn, signOut } from './auth-handling.js';
+import { getCredentials, signUp, signIn, signOut } from '/src/js/auth-handling.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
