@@ -220,7 +220,7 @@ function handleDragEnd(event) {
 async function logout() {
   try {
     await signOut(); // Call the signOut function
-    window.location.href = '/src/index.html'; // Redirect to the main page after logout
+    window.location.href = '/index.html'; // Redirect to the main page after logout
   } catch (error) {
     console.error('Error logging out:', error.message);
   }
