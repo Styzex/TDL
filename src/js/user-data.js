@@ -40,11 +40,19 @@ export async function loadBlocks() {
 }
 
 // Function to save blocks data to Supabase
-export async function saveBlocks(blocks, user) {
-  if (!user) {
+export async function saveBlocks(blocks) {
+  const { data: session, error: sessionError } = await supabase.auth.getSession();
+  if (sessionError) {
+    console.error('Error getting session:', sessionError.message);
+    return false;
+  }
+
+  if (!session) {
     console.error('User not authenticated.');
     return false;
   }
+
+  const { user } = session;
 
   try {
     const { data, error } = await supabase
@@ -65,7 +73,7 @@ export async function saveBlocks(blocks, user) {
 }
 
 // Function to delete old records for the same user
-async function deleteOldRecords(userId) {
+export async function deleteOldRecords(userId) {
   try {
     const { data, error } = await supabase
       .from('blocks')
