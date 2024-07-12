@@ -38,10 +38,10 @@ document.addEventListener('submit', async function(ev) {
       const user = getCredentials(form);
       await signIn(user.email, user.password);
       status.textContent = 'Login successful!';
-      window.location.href = '/dashboard.html'; // Redirect to the user's dashboard/todo list
+      window.location.href = '/src/dashboard.html'; // Redirect to the user's dashboard/todo list
     } else if (form.id === 'logout-form') {
       await signOut();
-      window.location.href = '/logout.html';
+      window.location.href = '/src/logout.html';
     }
   } catch (error) {
     console.error('Error:', error.message);
