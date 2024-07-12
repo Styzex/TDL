@@ -5,7 +5,6 @@
   
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -14,7 +13,7 @@
   }
   
   a {
-    font-weight: 500;
+    font-weight: bold;
     color: #646cff;
     text-decoration: inherit;
   }
@@ -28,6 +27,14 @@
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   h1 {
@@ -59,10 +66,6 @@
     padding: 2em;
   }
   
-  .read-the-docs {
-    color: #888;
-  }
-  
   button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -70,7 +73,6 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
   }
@@ -95,3 +97,47 @@
     }
   }
   
+  .mainmessage {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1.2em;
+  }
+
+  #status {
+    text-align: center;
+    color: rgb(34, 35, 41);
+    margin-top: 10px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button[type="submit"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border-color: #ccc;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+  }

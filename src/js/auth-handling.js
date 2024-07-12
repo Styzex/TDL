@@ -13,14 +13,38 @@ export async function signIn(email, password) {
 }
 
 export async function signOut() {
-  const { error } = await supabase.auth.signOut();
+  const { data, error } = await supabase.auth.signOut();
   if (error) throw error;
+  return data;
 }
 
-// Get credentials from form inputs
-export function getCredentials() {
+export function getCredentials(form) {
   return {
-    email: document.querySelector('[name="email"]').value,
-    password: document.querySelector('[name="password"]').value
+    email: form.querySelector('[name="email"]').value,
+    password: form.querySelector('[name="password"]').value
   };
 }
+
+document.addEventListener('submit', async function(ev) {
+  ev.preventDefault();
+  const form = ev.target;
+  const status = document.getElementById('status');
+  try {
+    if (form.id === 'signup-form') {
+      const user = getCredentials(form);
+      await signUp(user.email, user.password);
+      status.textContent = 'Signup successful! Please check your email to confirm your account.';
+    } else if (form.id === 'login-form') {
+      const user = getCredentials(form);
+      await signIn(user.email, user.password);
+      status.textContent = 'Login successful!';
+      window.location.href = '/src/html/dashboard.html'; // Redirect to the user's dashboard/todo list
+    } else if (form.id === 'logout-form') {
+      await signOut();
+      window.location.href = '/src/html/logout.html';
+    }
+  } catch (error) {
+    console.error('Error:', error.message);
+    status.textContent = 'Error: ' + error.message;
+  }
+});

@@ -1,13 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Welcome to <a>TDL</a>!</h1>
+    <p>Explore and manage your workspace <a>effortlessly</a> with TDL.</p>
+    <p>This is a simple to-do list application built using Supabase and JavaScript.</p>
+    <p>To get started, sign up or log in using the buttons below.</p>
+    <button onclick="window.location.href='/src/html/login.html'">Log in</button>
+    <button onclick="window.location.href='/src/html/signup.html'">Sign up</button>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
 </html>
