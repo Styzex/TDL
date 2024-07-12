@@ -5,12 +5,18 @@
 
   color-scheme: light;
   color: #242424;
-  background-color: #FAF9F6;
+  background-color: #eaeae7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  border-radius: 25px;
+  box-shadow: #b4b4b4 0px 0px 20px;
+  background-color:#FAF9F6;
 }
 
 a {
