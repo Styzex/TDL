@@ -1,3 +1,4 @@
+import { createClient } from '@supabase/supabase-js';
 import { signOut } from './auth-handling.js';
 import { loadBlocks, saveBlocks } from './user-data.js';
 
