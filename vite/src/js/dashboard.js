@@ -35,7 +35,7 @@ function addBlockWithData(blockData) {
 
   // Add button to add todos to the block
   let addTodoButton = document.createElement('button');
-  addTodoButton.innerHTML = '<img src="/icons/square-plus.svg" alt="Add Todo"/>';
+  addTodoButton.innerHTML = '<img src="/vite/icons/square-plus.svg" alt="Add Todo"/>';
   addTodoButton.addEventListener('click', function(event) {
     event.preventDefault();
     addTodoToBlock(todosContainer);
@@ -43,7 +43,7 @@ function addBlockWithData(blockData) {
 
   // Add button to remove todos from the block
   let removeTodoButton = document.createElement('button');
-  removeTodoButton.innerHTML = '<img src="/icons/square-minus.svg" alt="Remove Todo"/>';
+  removeTodoButton.innerHTML = '<img src="/vite/icons/square-minus.svg" alt="Remove Todo"/>';
   removeTodoButton.addEventListener('click', function(event) {
     event.preventDefault();
     removeTodoFromBlock(todosContainer);
@@ -52,7 +52,7 @@ function addBlockWithData(blockData) {
 
   // Add button to remove the block
   let removeBlockButton = document.createElement('button');
-  removeBlockButton.innerHTML = '<img src="/icons/trash.svg" alt="Remove Block"/>';
+  removeBlockButton.innerHTML = '<img src="/vite/icons/trash.svg" alt="Remove Block"/>';
   removeBlockButton.addEventListener('click', function(event) {
     event.preventDefault();
     blocksContainer.removeChild(block);
@@ -115,7 +115,7 @@ function addBlock(event) {
 
   // Add button to add todos to the block
   let addTodoButton = document.createElement('button');
-  addTodoButton.innerHTML = '<img src="/icons/square-plus.svg" alt="Add Todo"/>';
+  addTodoButton.innerHTML = '<img src="/vite/icons/square-plus.svg" alt="Add Todo"/>';
   addTodoButton.addEventListener('click', function(event) {
     event.preventDefault();
     addTodoToBlock(todosContainer);
@@ -123,7 +123,7 @@ function addBlock(event) {
 
   // Add button to remove todos from the block
   let removeTodoButton = document.createElement('button');
-  removeTodoButton.innerHTML = '<img src="/icons/square-minus.svg" alt="Remove Todo"/>';
+  removeTodoButton.innerHTML = '<img src="/vite/icons/square-minus.svg" alt="Remove Todo"/>';
   removeTodoButton.addEventListener('click', function(event) {
     event.preventDefault();
     removeTodoFromBlock(todosContainer);
@@ -132,7 +132,7 @@ function addBlock(event) {
 
   // Add button to remove the block
   let removeBlockButton = document.createElement('button');
-  removeBlockButton.innerHTML = '<img src="/icons/trash.svg" alt="Remove Block"/>';
+  removeBlockButton.innerHTML = '<img src="/vite/icons/trash.svg" alt="Remove Block"/>';
   removeBlockButton.addEventListener('click', function(event) {
     event.preventDefault();
     blocksContainer.removeChild(block);
