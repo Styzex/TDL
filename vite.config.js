@@ -12,10 +12,10 @@ export default defineConfig({
         signup: '/html/signup.html',
         dashboard: '/html/dashboard.html',
         logout: '/html/logout.html',
-        authHandling: '/js/auth-handling.js',
-        supabaseClient: '/js/supabaseClient.js',
-        userData: '/js/user-data.js',
-        dashboardjs: '/js/dashboard.js'
+        authHandling: '/assets/auth-handling.js',
+        supabaseClient: '/assets/supabaseClient.js',
+        userData: '/assets/user-data.js',
+        dashboardjs: '/assets/dashboard.js',
       },
       external: ['@supabase/supabase-js'] // Add @supabase/supabase-js to external dependencies if necessary
     }
