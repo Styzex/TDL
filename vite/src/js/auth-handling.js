@@ -38,10 +38,10 @@ document.addEventListener('submit', async function(ev) {
       const user = getCredentials(form);
       await signIn(user.email, user.password);
       status.textContent = 'Login successful!';
-      window.location.href = '/vite/src/html/dashboard.html';
+      window.location.href = '/html/dashboard.html';
     } else if (form.id === 'logout-form') {
       await signOut();
-      window.location.href = '/vite/src/html/logout.html';
+      window.location.href = '/html/logout.html';
     }
   } catch (error) {
     console.error('Error:', error.message);
