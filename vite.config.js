@@ -17,7 +17,8 @@ export default defineConfig({
         userData: '/assets/user-data.js',
         dashboardjs: '/assets/dashboard.js',
       },
-      external: ['@supabase/supabase-js'] // Add @supabase/supabase-js to external dependencies if necessary
+      external: ['@supabase/supabase-js'], // Add @supabase/supabase-js to external dependencies if necessary
+      external: ['@clerk/clerk-js']
     }
   }
 });

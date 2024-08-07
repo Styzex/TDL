@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-js": "^5.8.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
